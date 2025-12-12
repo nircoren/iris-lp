@@ -1,0 +1,212 @@
+// Simple script for Formspree version
+// Smooth scrolling function
+function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
+
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        navLinks.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+        });
+    }
+
+    // Floating CTA button scroll behavior
+    const floatingCta = document.getElementById('floatingCta');
+    if (floatingCta) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 200) {
+                floatingCta.style.opacity = '1';
+                floatingCta.style.visibility = 'visible';
+            } else {
+                floatingCta.style.opacity = '0';
+                floatingCta.style.visibility = 'hidden';
+            }
+        });
+    }
+
+    // Workshop option selection
+    window.openContactForm = function(workshopType) {
+        const workshopSelect = document.getElementById('workshop-type');
+        if (workshopSelect) {
+            workshopSelect.value = workshopType;
+        }
+        scrollToSection('contact');
+    };
+
+    // Add animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    const animateElements = document.querySelectorAll('.benefit-item, .benefit-card, .option-card, .gallery-img');
+    animateElements.forEach(el => {
+        el.classList.add('animate-element');
+        observer.observe(el);
+    });
+});
+
+// Add CSS animations for mobile nav and scroll animations
+const style = document.createElement('style');
+style.textContent = `
+    /* Mobile navigation styles */
+    @media (max-width: 768px) {
+        .nav-links {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+            padding: 1rem;
+            margin: 0;
+            min-width: 200px;
+            transform: translateY(-10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .nav-links li {
+            margin: 0.5rem 0;
+        }
+        
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    }
+    
+    /* Animation for elements on scroll */
+    .animate-element {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+    }
+    
+    .animate-element.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* Stagger animation for benefit items */
+    .benefit-item:nth-child(1) { transition-delay: 0.1s; }
+    .benefit-item:nth-child(2) { transition-delay: 0.2s; }
+    .benefit-item:nth-child(3) { transition-delay: 0.3s; }
+    .benefit-item:nth-child(4) { transition-delay: 0.4s; }
+    
+    .benefit-card:nth-child(1) { transition-delay: 0.1s; }
+    .benefit-card:nth-child(2) { transition-delay: 0.2s; }
+    .benefit-card:nth-child(3) { transition-delay: 0.3s; }
+    
+    .gallery-img:nth-child(1) { transition-delay: 0.1s; }
+    .gallery-img:nth-child(2) { transition-delay: 0.2s; }
+    .gallery-img:nth-child(3) { transition-delay: 0.3s; }
+`;
+document.head.appendChild(style);
+
+// Initialize floating CTA as hidden
+document.addEventListener('DOMContentLoaded', function() {
+    const floatingCta = document.getElementById('floatingCta');
+    if (floatingCta) {
+        floatingCta.style.opacity = '0';
+        floatingCta.style.visibility = 'hidden';
+        floatingCta.style.transition = 'opacity 0.3s ease, visibility 0.3s ease';
+    }
+});
+
+// Add magic sparkle effect to magic buttons
+document.addEventListener('DOMContentLoaded', function() {
+    const magicBtns = document.querySelectorAll('.magic-btn');
+
+    magicBtns.forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+            createSparkles(this);
+        });
+    });
+});
+
+function createSparkles(element) {
+    for (let i = 0; i < 5; i++) {
+        setTimeout(() => {
+            const sparkle = document.createElement('span');
+            sparkle.textContent = '✨';
+            sparkle.style.position = 'absolute';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.fontSize = '12px';
+            sparkle.style.top = (Math.random() * element.offsetHeight) + 'px';
+            sparkle.style.left = (Math.random() * element.offsetWidth) + 'px';
+            sparkle.style.animation = 'sparkle 0.8s ease-out forwards';
+            sparkle.style.zIndex = '1000';
+
+            element.style.position = 'relative';
+            element.appendChild(sparkle);
+
+            setTimeout(() => {
+                if (sparkle.parentNode) {
+                    sparkle.remove();
+                }
+            }, 800);
+        }, i * 100);
+    }
+}
+
+// Add sparkle animation
+const sparkleStyle = document.createElement('style');
+sparkleStyle.textContent = `
+    @keyframes sparkle {
+        0% {
+            transform: scale(0) rotate(0deg);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1) rotate(180deg);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(0) rotate(360deg);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(sparkleStyle);
