@@ -673,6 +673,30 @@ body {
     text-align: right;
 }
 
+.contact-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+.contact-link:hover {
+    color: var(--secondary-color);
+    background-color: rgba(59, 130, 246, 0.1);
+    text-decoration: none;
+}
+
+.email-link:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.phone-link:hover {
+    background-color: rgba(37, 211, 102, 0.1);
+    color: #25d366;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;

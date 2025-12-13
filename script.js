@@ -142,8 +142,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const contactAddress = document.getElementById('contactAddress');
 
         contactName.textContent = envVars.OWNER_NAME;
+
         contactEmail.textContent = envVars.CONTACT_EMAIL;
+        contactEmail.href = `mailto:${envVars.CONTACT_EMAIL}`;
+
+// Phone - opens WhatsApp on click
+        let phoneNumber = envVars.CONTACT_PHONE.replace(/[\s\-\(\)\+]/g, '');
+        if (phoneNumber.startsWith('0')) {
+            phoneNumber = '972' + phoneNumber.slice(1); // Replace leading 0 with Israel country code
+        }
         contactPhone.textContent = envVars.CONTACT_PHONE;
+        contactPhone.href = `https://wa.me/${phoneNumber}`;
+
         contactAddress.textContent = envVars.CONTACT_ADDRESS;
     });
 });
