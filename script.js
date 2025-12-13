@@ -41,13 +41,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Contact form handling with EmailJS
+    // Contact form handling
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        // Initialize EmailJS
-        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual EmailJS public key
-
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
 
             // Get form data
@@ -55,8 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = {
                 name: formData.get('name'),
                 email: formData.get('email'),
-                phone: formData.get('phone'),
-                workshopType: formData.get('workshop-type'),
                 message: formData.get('message')
             };
 
@@ -79,32 +74,33 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.textContent = 'שולח...';
             submitBtn.disabled = true;
 
-            // Prepare template parameters for EmailJS
-            const templateParams = {
-                from_name: data.name,
-                from_email: data.email,
-                phone: data.phone || 'לא סופק',
-                workshop_type: data.workshopType || 'לא נבחר',
-                message: data.message,
-                to_email: 'iris.koren@example.com', // Replace with actual email
-                reply_to: data.email
-            };
+            try {
+                // Send data to server using environment-specific endpoint
+                const endpoint = window.APP_CONFIG ? window.APP_CONFIG.CONTACT_ENDPOINT : '/api/contact';
+                console.log('📤 Sending to endpoint:', endpoint);
 
-            // Send email using EmailJS
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-                .then(function(response) {
-                    console.log('Email sent successfully!', response.status, response.text);
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
                     showNotification('ההודעה נשלחה בהצלחה! איריס תחזור אליכם בקרוב.', 'success');
                     contactForm.reset();
-                }, function(error) {
-                    console.error('Email sending failed:', error);
-                    showNotification('אירעה שגיאה בשליחת ההודעה. אנא נסו שוב או צרו קשר ישירות.', 'error');
-                })
-                .finally(function() {
-                    // Restore button state
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                });
+                } else {
+                    throw new Error('Server error');
+                }
+            } catch (error) {
+                console.error('Error sending message:', error);
+                showNotification('אירעה שגיאה בשליחת ההודעה. אנא נסו שוב או צרו קשר ישירות.', 'error');
+            } finally {
+                // Restore button state
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
         });
     }
 
