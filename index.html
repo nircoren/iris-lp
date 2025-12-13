@@ -17,7 +17,7 @@
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <h2>איריס קורן</h2>
+                <h2 id="navBrand">איריס קורן</h2>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">בית</a></li>
@@ -239,16 +239,16 @@
             <h2 class="section-title">צור קשר</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>איריס קורן</h3>
+                    <h3 id="contactName">איריס קורן</h3>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <strong>מייל:</strong> iris@iriscoren.co.il
+                            <strong>מייל:</strong> <span id="contactEmail">iris@iriscoren.co.il</span>
                         </div>
                         <div class="contact-item">
-                            <strong>טלפון:</strong> 050-123-4567
+                            <strong>טלפון:</strong> <span id="contactPhone">050-123-4567</span>
                         </div>
                         <div class="contact-item">
-                            <strong>כתובת:</strong> מושב ישראל
+                            <strong>כתובת:</strong> <span id="contactAddress">מושב ישראל</span>
                         </div>
                     </div>
                 </div>
@@ -287,11 +287,12 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 איריס קורן. כל הזכויות שמורות.</p>
+                <p id="copyrightText">&copy; 2025 איריס קורן. כל הזכויות שמורות.</p>
             </div>
         </div>
     </footer>
 
+    <script src="env-loader.js"></script>
     <script src="config.js"></script>
     <script src="script.js"></script>
 </body>

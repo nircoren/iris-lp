@@ -133,6 +133,31 @@ document.addEventListener('DOMContentLoaded', function() {
         el.classList.add('animate-element');
         observer.observe(el);
     });
+
+    // Initialize dynamic content from config
+    if (window.APP_CONFIG) {
+        // Update contact information
+        const contactName = document.getElementById('contactName');
+        const contactEmail = document.getElementById('contactEmail');
+        const contactPhone = document.getElementById('contactPhone');
+        const contactAddress = document.getElementById('contactAddress');
+        const navBrand = document.getElementById('navBrand');
+        const copyrightText = document.getElementById('copyrightText');
+
+        if (contactName) contactName.textContent = window.APP_CONFIG.OWNER_NAME;
+        if (contactEmail) contactEmail.textContent = window.APP_CONFIG.CONTACT_EMAIL;
+        if (contactPhone) contactPhone.textContent = window.APP_CONFIG.CONTACT_PHONE;
+        if (contactAddress) contactAddress.textContent = window.APP_CONFIG.CONTACT_ADDRESS;
+        if (navBrand) navBrand.textContent = window.APP_CONFIG.SITE_NAME;
+        if (copyrightText) copyrightText.textContent = `© ${new Date().getFullYear()} ${window.APP_CONFIG.OWNER_NAME}. כל הזכויות שמורות.`;
+
+        // Update page title
+        if (window.APP_CONFIG.SITE_TITLE) {
+            document.title = window.APP_CONFIG.SITE_TITLE;
+        }
+
+        console.log('✅ Dynamic content initialized from config');
+    }
 });
 
 // Show notification function

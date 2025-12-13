@@ -3,6 +3,16 @@ window.APP_CONFIG = {
     // Detect if we're in development (localhost) or production
     isDevelopment: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1',
 
+    // Contact Information
+    CONTACT_EMAIL: 'iris@iriscoren.co.il',
+    CONTACT_PHONE: '050-123-4567',
+    CONTACT_ADDRESS: 'מושב ישראל',
+
+    // Website Information
+    SITE_TITLE: 'איריס קורן - סדנת EFT לצוותי חינוך והוראה',
+    SITE_NAME: 'איריס קורן',
+    OWNER_NAME: 'איריס קורן',
+
     // API endpoints based on environment
     get API_BASE_URL() {
         if (this.isDevelopment) {
