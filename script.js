@@ -139,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const contactEmail = document.getElementById('contactEmail');
         const contactPhone = document.getElementById('contactPhone');
         const contactAddress = document.getElementById('contactAddress');
+        const floatingCta = document.getElementById('floatingCta');
 
         contactEmail.textContent = envVars.CONTACT_EMAIL;
         contactEmail.href = `mailto:${envVars.CONTACT_EMAIL}`;
@@ -161,6 +162,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         contactPhone.textContent = formatPhoneForDisplay(envVars.CONTACT_PHONE);
         contactPhone.href = `https://wa.me/${phoneNumber}`;
+
+        // Update floating CTA with the same WhatsApp link
+        if (floatingCta) {
+            const floatingBtn = floatingCta.querySelector('a');
+            if (floatingBtn) {
+                floatingBtn.href = `https://wa.me/${phoneNumber}`;
+            }
+        }
 
         contactAddress.textContent = envVars.CONTACT_ADDRESS;
     });
