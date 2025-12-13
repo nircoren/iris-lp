@@ -699,6 +699,8 @@ body {
 
     .about-image {
         order: 1;
+        text-align: center;
+        justify-self: center;
     }
 
     .about-text {
