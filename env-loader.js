@@ -11,7 +11,7 @@ class EnvLoader {
 
     async loadEnvFile() {
         try {
-            const response = await fetch('/.env');
+            const response = await fetch('./.env');
             if (!response.ok) {
                 console.log('📝 No .env file found, using default config values');
                 return;
