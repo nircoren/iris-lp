@@ -32,13 +32,13 @@ app.post('/api/contact', async (req, res) => {
     console.log('TO_EMAIL', process.env.TO_EMAIL);
       const resend = new Resend(process.env.RESEND_API_KEY);
       const response = await resend.emails.send({
-          from: 'iris@iriscoren.co.il',
-          to: 'nircoren@gmail.com',
-          subject: 'Hello World',
+          from: process.env.FROM_EMAIL,
+          to: process.env.TO_EMAIL,
+          subject: 'הודעה מהאתר',
           html: `<p>${message}</p>`
       });
       if (response.data.id) {
-        console.log('Email sent successfully with ID:', response.id);
+        console.log('Email sent successfully with ID:', response.data.id);
           // Check if it's a JSON request
           if (req.headers['content-type'] === 'application/json') {
               res.json({ success: true, message: 'Email sent successfully' });
