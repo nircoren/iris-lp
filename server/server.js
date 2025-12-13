@@ -1,9 +1,12 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const path = require('path');
 const {Resend} = require('resend');
 
+dotenv.config({ path: path.join(__dirname, '.env') });
+
 const NODE_ENV = process.env.NODE_ENV || 'development';
-require('dotenv').config({ path: `.env.${NODE_ENV}` });
+dotenv.config({ path: path.join(__dirname, `.env.${NODE_ENV}`) });
 
 const app = express();
 const PORT = process.env.PORT || 3000;
