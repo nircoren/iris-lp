@@ -25,6 +25,8 @@ app.post('/api/contact', async (req, res) => {
         error: 'All fields are required'
       });
     }
+    console.log('NODE_ENV', process.env.NODE_ENV);
+    console.log('TO_EMAIL', process.env.TO_EMAIL);
       const resend = new Resend(process.env.RESEND_API_KEY);
       const response = await resend.emails.send({
           from: 'iris@iriscoren.co.il',
