@@ -8,77 +8,69 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Floating CTA Button -->
-    <div class="floating-cta" id="floatingCta">
-        <a href="#contact" class="floating-btn">קבעו סדנה</a>
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-cta">
+        <a href="https://wa.me/972501234567" target="_blank" rel="noopener noreferrer" class="floating-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7">
+                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+            </svg>
+        </a>
     </div>
 
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <h2 id="navBrand">איריס קורן</h2>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">בית</a></li>
-                <li><a href="#about">אודות</a></li>
-                <li><a href="#workshop">הסדנה</a></li>
-                <li><a href="#benefits">יעדים</a></li>
-                <li><a href="#contact">צור קשר</a></li>
-            </ul>
-            <button class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </header>
+
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">עובד כמו קסם!</h1>
-                <h2 class="hero-subtitle">סדנת EFT לצוותי חינוך והוראה</h2>
-                <p class="hero-description">
-                    כלי אפקטיבי, מוכח מחקרית וקל ליישום המתאים להתמודדות עם רגעי משבר, סטרס וכאב פיזי.
-                    בואו להכיר כלי פשוט שעובד כמו קסם ומסייע להפחתת סטרס, ברמה מיידית ובזמן קצר.
-                </p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary magic-btn" onclick="scrollToSection('contact')">בואו נתחיל!</button>
-                    <button class="btn btn-secondary" onclick="scrollToSection('about')">קראו עוד</button>
-                </div>
+            <div class="mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-color); margin: 0 auto; display: block;">
+                    <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+                    <path d="M20 3v4"></path>
+                    <path d="M22 5h-4"></path>
+                    <path d="M4 17v2"></path>
+                    <path d="M5 18H3"></path>
+                </svg>
             </div>
+            <h1 class="hero-title">עובד כמו קסם!</h1>
+            <h2 class="hero-subtitle">סדנת EFT לצוותי חינוך והוראה</h2>
+            <p class="hero-description">
+                בואו להכיר כלי אפקטיבי, מוכח מחקרית וקל ליישום המתאים להתמודדות עם רגעי משבר, סטרס וכאב פיזי.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('contact')">בואו נדבר</button>
+            </div>
+        </div>
+        <div class="hero-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
+            </svg>
         </div>
     </section>
 
     <!-- Problem Section -->
     <section class="problem-section">
         <div class="container">
-            <h2 class="section-title">האם הייתם מאמינים לי?</h2>
             <div class="problem-content">
                 <div class="problem-text">
                     <p class="question-text">
-                        אם הייתי אומרת לכם שיש כלי פשוט שעובד כמו קסם ומסייע להפחתת סטרס, ברמה מיידית ובזמן קצר:
+                        אם הייתי אומרת לכם/ן שיש כלי פשוט שעובד כמו קסם ומסייע ל<strong>הפחתת סטרס</strong> ברמה מיידית ובזמן קצר,
                     </p>
-                    <div class="benefits-grid">
-                        <div class="benefit-item">
-                            <h4>כאבים פיזיים</h4>
-                            <p>כמו כאב ראש, מיגרנות, כאבי צוואר ועוד</p>
-                        </div>
-                        <div class="benefit-item">
-                            <h4>כאבים רגשיים</h4>
-                            <p>כמו תחושות כעס, כבדות, עייפות, ייאוש, דכדוך ועוד</p>
-                        </div>
-                        <div class="benefit-item">
-                            <h4>מניעת תגובתיות</h4>
-                            <p>כלי שימנע מכם לפעול בתגובתיות יתר וממקום אימפולסיבי</p>
-                        </div>
-                        <div class="benefit-item">
-                            <h4>נגיש וזמין</h4>
-                            <p>כלי שלא עולה כסף, נמצא בכפות הידיים שלכם ולא צריך מכשירים מיוחדים</p>
-                        </div>
-                    </div>
+                    <p class="question-text">
+                        כלי שמקל על <strong>כאבים פיזיים</strong> (כמו כאב ראש, מיגרנות, כאבי צוואר ועוד)
+                    </p>
+                    <p class="question-text">
+                        ועל <strong>כאבים רגשיים</strong> (כמו תחושות כעס, ייאוש, כבדות, עייפות, דכדוך ועוד)
+                    </p>
+                    <p class="question-text">
+                        כלי שימנע מכם/ן <strong>לפעול בתגובתיות יתר וממקום אימפולסיבי</strong> (ואז להצטער על כך)
+                    </p>
+                    <p class="question-text">
+                        כלי שלא צריך בשביל להפעיל אותו יום לימודים ארוך, מכשירים מיוחדים או תרופות,
+                    </p>
+                    <p class="question-text">
+                        כלי ש<strong>לא עולה כסף</strong> ונמצא בכפות הידיים שלכם (פיזית ומטאפורית)
+                    </p>
+                    <h3 class="question-highlight">הייתם/ן מאמינים לי???</h3>
                 </div>
             </div>
         </div>
@@ -89,25 +81,20 @@
         <div class="container">
             <h2 class="section-title">שמחה להכיר</h2>
             <div class="about-content">
-                <div class="about-image">
-                    <img src="images/v.jpeg" alt="איריס קורן" class="about-img">
-                </div>
                 <div class="about-text">
                     <h3>היי, אני איריס קורן</h3>
-                    <div class="credentials">
-                        <p><strong>בעלת תואר MBA</strong>, מנהלת בכירה בשירות המדינה</p>
-                        <p><strong>פסיכותרפיסטית ומטפלת EFT מוסמכת</strong></p>
-                        <p><strong>מרצה ומנחת סדנאות בשיטת "רפא את חייך"</strong> של לואיז היי</p>
-                        <p><strong>מוסמכת בהנחיית קבוצות</strong> מטעם מכללת אורנים</p>
-                    </div>
                     <p class="about-description">
-                        מעל 5 שנים אני מלווה אנשים בתהליכים של שינוי, ריפוי וחיזוק פנימי.
-                        את הסדנה המוצעת התחלתי לפתח כמנהלת בעבורי ובעבור העובדים והלקוחות שלי במרחב הציבורי.
+                        אני <strong>איריס קורן</strong>, מנהלת בכירה בשירות המדינה, בעלת תואר MBA במנהל עסקים, מוסמכת בהנחיית קבוצת מטעם מכללת אורנים. מרצה ומנחת סדנאות בשיטת "רפא את חייך" של לואיז היי, פסיכותרפיסטית ומטפלת מוסמכת EFT.
+                    </p>
+                    <p class="about-description">
+                        מעל ל-5 שנים אני מלווה אנשים בתהליכים של שינוי, ריפוי וחיזוק פנימי.
                     </p>
                     <p class="mission-text">
-                        <strong>הבחירה בצוותי ההוראה והחינוך הייתה בעבורי טבעית ומדויקת</strong> -
-                        אני רואה בכם חוליה משמעותית ועוצמתית במבנה החברה כולה.
+                        <strong>הבחירה בצוותי ההוראה והחינוך</strong> הייתה בעבורי טבעית ומדויקת שכן אני רואה בכם/ן חוליה משמעותית ועוצמתית במבנה החברה כולה ואני דאוגה ועצובה לנוכח האתגרים, השחיקה, רמות הסטרס בהם אתם/ן נתונים בכל יום.
                     </p>
+                </div>
+                <div class="about-image">
+                    <img src="images/iris.jpeg" alt="איריס קורן" class="about-img">
                 </div>
             </div>
         </div>
@@ -128,17 +115,18 @@
                     זוהי הדרך המהירה והפרקטית ביותר להעניק לעצמנו שליטה רגשית וכלים לשימוש עצמי ומיידי.
                 </p>
                 <div class="testimonial">
-                    <p class="quote">"אין לכם מושג כמה פעמים שמעתי בקצה ההתנסות בשיטה את המילים: 'וואו, זה באמת עובד. זה כמו קסם!'"</p>
-                    <p class="quote-note">(וגם מאנשים מאוד ציניים וסקפטיים שמעתי אותן אינספור פעמים)</p>
+                    <p class="quote">"וואו, זה באמת עובד. זה כמו קסם!"</p>
+                    <p class="quote-note">- משתתפי הסדנאות</p>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Benefits Section -->
     <section id="benefits" class="benefits-section">
         <div class="container">
-            <h2 class="section-title">איזו תועלת מיידית הסדנה מביאה לצוותי הוראה וחינוך?</h2>
+            <h2 class="section-title">איזו תועלת מיידית הסדנה מביאה?</h2>
 
             <div class="benefits-container">
                 <!-- Organizational Benefits -->
@@ -146,16 +134,56 @@
                     <h3 class="category-title">ברמה הארגונית</h3>
                     <div class="benefit-cards">
                         <div class="benefit-card">
-                            <h4>שיפור החוסן בצוות</h4>
-                            <p>בניית חוסן פנימי, מניעת שחיקה וצמצום היעדרויות</p>
+                            <div class="flex items-start gap-4">
+                                <div style="background: rgba(212, 168, 83, 0.2); color: var(--accent-color); padding: 0.75rem; border-radius: 0.75rem; flex-shrink: 0;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.5rem; height: 1.5rem;">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>שיפור החוסן בצוות</h4>
+                                    <p>בניית חוסן פנימי ומניעת שחיקה וצמצום היעדרויות.</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="benefit-card">
-                            <h4>אקלים מיטבי</h4>
-                            <p>יצירת סביבת למידה רגועה יותר על ידי הורדת מפלס הלחץ</p>
+                            <div class="flex items-start gap-4">
+                                <div style="background: rgba(212, 168, 83, 0.2); color: var(--accent-color); padding: 0.75rem; border-radius: 0.75rem; flex-shrink: 0;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.5rem; height: 1.5rem;">
+                                        <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path>
+                                        <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path>
+                                        <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path>
+                                        <path d="M17.599 6.5a3 3 0 0 0 .399-1.375"></path>
+                                        <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
+                                        <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
+                                        <path d="M19.938 10.5a4 4 0 0 1 .585.396"></path>
+                                        <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
+                                        <path d="M19.967 17.484A4 4 0 0 1 18 18"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>אקלים מיטבי</h4>
+                                    <p>יצירת סביבת למידה רגועה יותר על ידי הורדת מפלס הלחץ.</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="benefit-card">
-                            <h4>השבת המשמעות</h4>
-                            <p>חיבור מחדש לשליחות, עלייה באנרגיות ושיפור שביעות הרצון</p>
+                            <div class="flex items-start gap-4">
+                                <div style="background: rgba(212, 168, 83, 0.2); color: var(--accent-color); padding: 0.75rem; border-radius: 0.75rem; flex-shrink: 0;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.5rem; height: 1.5rem;">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <circle cx="12" cy="12" r="6"></circle>
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>השבת המשמעות</h4>
+                                    <p>חיבור מחדש לשליחות, עלייה באנרגיות ושיפור שביעות הרצון.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -165,16 +193,43 @@
                     <h3 class="category-title">ברמה האישית</h3>
                     <div class="benefit-cards">
                         <div class="benefit-card">
-                            <h4>הפחתת לחץ מיידית</h4>
-                            <p>כלי ל"איפוס עצמי" לשימוש בהפסקה, לפני שיעור או פגישת הורים - תוך דקות</p>
+                            <div class="flex items-start gap-4">
+                                <div style="background: rgba(212, 168, 83, 0.2); color: var(--accent-color); padding: 0.75rem; border-radius: 0.75rem; flex-shrink: 0;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.5rem; height: 1.5rem;">
+                                        <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>הפחתת לחץ מיידית</h4>
+                                    <p>כלי ל'איפוס' עצמי תוך דקות. לשימוש עצמי בהפסקה, לפני שיעור או פגישת הורים.</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="benefit-card">
-                            <h4>ויסות רגשי מול אתגרים</h4>
-                            <p>מעבר לתגובות רגועות יותר במצבי לחץ וקונפליקט</p>
+                            <div class="flex items-start gap-4">
+                                <div style="background: rgba(212, 168, 83, 0.2); color: var(--accent-color); padding: 0.75rem; border-radius: 0.75rem; flex-shrink: 0;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.5rem; height: 1.5rem;">
+                                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>ויסות רגשי מול אתגרים</h4>
+                                    <p>מעבר לתגובות רגועות יותר במצבי לחץ וקונפליקט.</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="benefit-card">
-                            <h4>חיזוק ביטחון עצמי</h4>
-                            <p>הגברת תחושת המסוגלות והנוכחות האנרגטית בכיתה</p>
+                            <div class="flex items-start gap-4">
+                                <div style="background: rgba(212, 168, 83, 0.2); color: var(--accent-color); padding: 0.75rem; border-radius: 0.75rem; flex-shrink: 0;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.5rem; height: 1.5rem;">
+                                        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>חיזוק ביטחון עצמי</h4>
+                                    <p>הגברת תחושת המסוגלות והנוכחות האנרגטית בכיתה.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -199,6 +254,17 @@
             <h2 class="section-title">מה אני מציעה?</h2>
             <div class="options-grid">
                 <div class="option-card">
+                    <div class="mb-6" style="display: flex; justify-content: center;">
+                        <div style="background: rgba(30, 58, 95, 0.1); border-radius: 50%; padding: 1rem; display: flex; align-items: center; justify-content: center; width: 64px; height: 64px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary-color); width: 32px; height: 32px;">
+                                <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+                                <path d="M20 3v4"></path>
+                                <path d="M22 5h-4"></path>
+                                <path d="M4 17v2"></path>
+                                <path d="M5 18H3"></path>
+                            </svg>
+                        </div>
+                    </div>
                     <h3>סדנה חד פעמית</h3>
                     <div class="option-details">
                         <p class="option-description">מפגש ממוקד, חוויתי ומעורר השראה עם כלים לשימוש מיידי</p>
@@ -210,22 +276,49 @@
                 </div>
 
                 <div class="option-card featured">
-                    <div class="featured-badge">מומלץ</div>
-                    <h3>תוכנית ארוכת טווח</h3>
+                    <div class="mb-6" style="display: flex; justify-content: center;">
+                        <div style="background: var(--accent-color); border-radius: 50%; padding: 1rem; display: flex; align-items: center; justify-content: center; width: 64px; height: 64px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary-color); width: 32px; height: 32px;">
+                                <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+                                <path d="M20 3v4"></path>
+                                <path d="M22 5h-4"></path>
+                                <path d="M4 17v2"></path>
+                                <path d="M5 18H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>סדרת מפגשים</h3>
                     <div class="option-details">
-                        <p class="option-description">תוכנית מותאמת לרווחה ארגונית, בהתאם ליעדי בית הספר</p>
-                        <p class="option-subtitle">סדרה תהליכית לבניית חוסן, עיבוד עומסים, יצירת גבולות ושינוי הרגלים רגשיים</p>
+                        <p class="option-description">סדרה תהליכית לבניית חוסן, עיבוד עומסים, יצירת גבולות ושינוי הרגלים רגשיים</p>
                         <div class="option-duration">
-                            <strong>משך הסדרה: 4 מפגשים</strong>
-                            <p>(בני שעתיים כל אחד)</p>
+                            <strong>משך הסדרה: 4 מפגשים (בני שעתיים כל אחד)</strong>
                         </div>
                     </div>
                     <button class="btn btn-primary" onclick="openContactForm('ארוכת טווח')">בחר אפשרות זו</button>
                 </div>
+
+                <div class="option-card">
+                    <div class="mb-6" style="display: flex; justify-content: center;">
+                        <div style="background: rgba(30, 58, 95, 0.1); border-radius: 50%; padding: 1rem; display: flex; align-items: center; justify-content: center; width: 64px; height: 64px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary-color); width: 32px; height: 32px;">
+                                <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+                                <path d="M20 3v4"></path>
+                                <path d="M22 5h-4"></path>
+                                <path d="M4 17v2"></path>
+                                <path d="M5 18H3"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>תוכנית מותאמת</h3>
+                    <div class="option-details">
+                        <p class="option-description">תוכנית ארוכת טווח לרווחה ארגונית, בהתאם ליעדי בית הספר</p>
+                    </div>
+                    <button class="btn btn-outline" onclick="openContactForm('תוכנית מותאמת')">בחר אפשרות זו</button>
+                </div>
             </div>
 
             <div class="final-message">
-                <p>לא משנה לי מה תהיה הבחירה שלכם - אני בכל מקרה אשמח לצאת לדרך משותפת, לסייע ולהטיב.</p>
+                <p>וזהו, לא משנה לי מה תהיה הבחירה שלכם/ן<br><strong>אני בכל מקרה אשמח לצאת לדרך משותפת, לסייע ולהטיב.</strong></p>
             </div>
         </div>
     </section>
@@ -235,47 +328,50 @@
         <div class="container">
             <h2 class="section-title">צור קשר</h2>
             <div class="contact-content">
-                <div class="contact-info">
-                    <h3 id="contactName">איריס קורן</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <strong>מייל:</strong> <a href="mailto:iris@iriscoren.co.il" id="contactEmail" class="contact-link email-link">iris@iriscoren.co.il</a>
-                        </div>
-                        <div class="contact-item">
-                            <strong>טלפון:</strong> <a href="https://wa.me/972501234567" id="contactPhone" class="contact-link phone-link" target="_blank">050-123-4567</a>
-                        </div>
-                        <div class="contact-item">
-                            <strong>כתובת:</strong> <span id="contactAddress">מושב ישראל</span>
-                        </div>
-                    </div>
-                </div>
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <label for="name" class="form-label">שם מלא</label>
-                        <input type="text" id="name" name="name" placeholder="שם מלא" required>
+                        <input type="text" id="name" name="name" placeholder="הכניסו את שמכם" required>
                     </div>
-                    <div class="form-group">
-                        <label for="email" class="form-label">אימייל</label>
-                        <input type="email" id="email" name="email" placeholder="אימייל" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone" class="form-label">טלפון</label>
-                        <input type="tel" id="phone" name="phone" placeholder="טלפון">
-                    </div>
-                    <div class="form-group">
-                        <label for="workshop-type" class="form-label">סוג סדנה</label>
-                        <select id="workshop-type" name="workshop-type">
-                            <option value="">בחר סוג סדנה</option>
-                            <option value="חד פעמית">סדנה חד פעמית</option>
-                            <option value="ארוכת טווח">תוכנית ארוכת טווח</option>
-                        </select>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">טלפון</label>
+                            <input type="tel" id="phone" name="phone" placeholder="050-0000000">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">אימייל</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="message" class="form-label">הודעה</label>
-                        <textarea id="message" name="message" placeholder="הודעה" rows="5" required></textarea>
+                        <textarea id="message" name="message" placeholder="ספרו לי על עצמכם ועל הצרכים שלכם..." rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary magic-btn">שלח הודעה</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.5rem; font-size: 1.125rem; border-radius: 0.75rem;">שליחה</button>
                 </form>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-color); width: 20px; height: 20px;">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span>050-123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-color); width: 20px; height: 20px;">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                        <span>iris@iriscoren.co.il</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-color); width: 20px; height: 20px;">
+                            <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>איריס קורן</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -284,7 +380,15 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p id="copyrightText">&copy; 2025 איריס קורן. כל הזכויות שמורות.</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-color); margin: 0 auto 1rem; display: block;">
+                    <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+                    <path d="M20 3v4"></path>
+                    <path d="M22 5h-4"></path>
+                    <path d="M4 17v2"></path>
+                    <path d="M5 18H3"></path>
+                </svg>
+                <p style="font-size: 1.25rem; font-weight: 500; color: white; margin-bottom: 1rem;">עובד כמו קסם!</p>
+                <p id="copyrightText" style="color: #9ca3af;">© כל הזכויות שמורות לאיריס קורן</p>
             </div>
         </div>
     </footer>
