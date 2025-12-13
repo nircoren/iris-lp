@@ -136,12 +136,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const envLoader = new EnvLoader();
     envLoader.loadEnvFile().then((envVars) => {
-        const contactName = document.getElementById('contactName');
         const contactEmail = document.getElementById('contactEmail');
         const contactPhone = document.getElementById('contactPhone');
         const contactAddress = document.getElementById('contactAddress');
-
-        contactName.textContent = envVars.OWNER_NAME;
 
         contactEmail.textContent = envVars.CONTACT_EMAIL;
         contactEmail.href = `mailto:${envVars.CONTACT_EMAIL}`;
@@ -151,7 +148,18 @@ document.addEventListener('DOMContentLoaded', function() {
         if (phoneNumber.startsWith('0')) {
             phoneNumber = '972' + phoneNumber.slice(1); // Replace leading 0 with Israel country code
         }
-        contactPhone.textContent = envVars.CONTACT_PHONE;
+        // Format phone number for display (XXX-XXXXXXX)
+        const formatPhoneForDisplay = (phone) => {
+            // Remove all non-digit characters
+            const digits = phone.replace(/\D/g, '');
+            // Format as XXX-XXXXXXX
+            if (digits.length >= 10) {
+                return `${digits.slice(0, 3)}-${digits.slice(3)}`;
+            }
+            return phone; // Return original if not enough digits
+        };
+
+        contactPhone.textContent = formatPhoneForDisplay(envVars.CONTACT_PHONE);
         contactPhone.href = `https://wa.me/${phoneNumber}`;
 
         contactAddress.textContent = envVars.CONTACT_ADDRESS;
