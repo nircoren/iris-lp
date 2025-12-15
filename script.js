@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = {
                 name: formData.get('name'),
                 email: formData.get('email'),
+                phone: formData.get('phone'),
                 message: formData.get('message')
             };
 
@@ -104,14 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Workshop option selection
-    window.openContactForm = function(workshopType) {
-        const workshopSelect = document.getElementById('workshop-type');
-        if (workshopSelect) {
-            workshopSelect.value = workshopType;
-        }
-        scrollToSection('contact');
-    };
 
     // Add animation on scroll
     const observerOptions = {

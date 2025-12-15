@@ -17,27 +17,35 @@
         </a>
     </div>
 
-
-
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <div class="mb-6 hero-star">
-                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-color); margin: 0 auto; display: block;">
-                    <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
-                    <path d="M20 3v4"></path>
-                    <path d="M22 5h-4"></path>
-                    <path d="M4 17v2"></path>
-                    <path d="M5 18H3"></path>
-                </svg>
-            </div>
-            <h1 class="hero-title">עובד כמו קסם!</h1>
-            <h2 class="hero-subtitle">סדנת EFT לצוותי חינוך והוראה</h2>
-            <p class="hero-description">
-                בואו להכיר כלי אפקטיבי, מוכח מחקרית וקל ליישום המתאים להתמודדות עם רגעי משבר, סטרס וכאב פיזי.
-            </p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="scrollToSection('contact')">בואו נדבר</button>
+            <div class="hero-layout">
+                <div class="hero-image-section">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=400&fit=crop&crop=faces"
+                         alt="מורה מעורר השראה"
+                         class="hero-teacher-img">
+                </div>
+                <div class="hero-text-section">
+                    <div class="mb-6 hero-star">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-color); margin: 0 auto; display: block;">
+                            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+                            <path d="M20 3v4"></path>
+                            <path d="M22 5h-4"></path>
+                            <path d="M4 17v2"></path>
+                            <path d="M5 18H3"></path>
+                        </svg>
+                    </div>
+                    <h1 class="hero-title">עובד כמו קסם!</h1>
+                    <h2 class="hero-subtitle">סדנת EFT לצוותי חינוך והוראה</h2>
+                    <p class="hero-description">
+                        כלים מעשיים לחיזוק החוסן הנפשי והרווחה במקום העבודה.<br>
+                        כלי אפקטיבי, מוכח מחקרית וקל ליישום המתאים להתמודדות עם רגעי משבר, סטרס וכאב פיזי.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('contact')">בואו נדבר</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="hero-arrow">
@@ -94,7 +102,7 @@
                     </p>
                 </div>
                 <div class="about-image">
-                    <img src="images/iris-with-view.jpeg" alt="איריס קורן" class="about-img">
+                    <img src="images/iris-kneset.jpeg" alt="איריס קורן" class="about-img">
                 </div>
             </div>
         </div>
@@ -238,7 +246,7 @@
             <!-- Inspirational Quote -->
             <div class="inspiration-quote">
                 <div class="inspiration-image">
-                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200" alt="מורה מעורר השראה" class="inspiration-img">
+                    <img src="./images/classroom1.png" alt="מורה מעורר השראה" class="inspiration-img">
                 </div>
                 <div class="inspiration-text">
                     <h3>מורה שטוב לו, יוצר כיתה שטוב בה!</h3>
@@ -272,7 +280,6 @@
                             <strong>משך הסדנה: שעתיים</strong>
                         </div>
                     </div>
-                    <button class="btn btn-outline" onclick="openContactForm('חד פעמית')">בחר אפשרות זו</button>
                 </div>
 
                 <div class="option-card featured">
@@ -294,7 +301,6 @@
                             <strong>משך הסדרה: 4 מפגשים (בני שעתיים כל אחד)</strong>
                         </div>
                     </div>
-                    <button class="btn btn-primary" onclick="openContactForm('ארוכת טווח')">בחר אפשרות זו</button>
                 </div>
 
                 <div class="option-card">
@@ -313,7 +319,6 @@
                     <div class="option-details">
                         <p class="option-description">תוכנית ארוכת טווח לרווחה ארגונית, בהתאם ליעדי בית הספר</p>
                     </div>
-                    <button class="btn btn-outline" onclick="openContactForm('תוכנית מותאמת')">בחר אפשרות זו</button>
                 </div>
             </div>
 
@@ -342,16 +347,8 @@
                         <input type="tel" id="phone" name="phone" placeholder="טלפון">
                     </div>
                     <div class="form-group">
-                        <label for="workshop-type" class="form-label">סוג סדנה</label>
-                        <select id="workshop-type" name="workshop-type">
-                            <option value="">בחר סוג סדנה</option>
-                            <option value="חד פעמית">סדנה חד פעמית</option>
-                            <option value="ארוכת טווח">תוכנית ארוכת טווח</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
                         <label for="message" class="form-label">הודעה</label>
-                        <textarea id="message" name="message" placeholder="הודעה" rows="5" required></textarea>
+                        <textarea id="message" name="message" placeholder="רוצים לדבר איתי? מעוניינים בסדנה? כתבו לי את הפרטים והתעניינות שלכם..." rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.5rem; font-size: 1.125rem; border-radius: 0.75rem;">שליחה</button>
                 </form>
