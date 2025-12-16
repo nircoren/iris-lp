@@ -403,7 +403,7 @@ body {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 3rem;
     align-items: center;
     max-width: 96rem;
@@ -416,7 +416,7 @@ body {
 
 .about-img {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     border-radius: 1rem;
     box-shadow: var(--shadow-2xl);
 }
@@ -449,6 +449,55 @@ body {
 .mission-text strong {
     color: var(--accent-color);
     font-weight: 700;
+}
+
+.about-text .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.about-text .gallery-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-text .gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Image Gallery Section */
+.image-gallery {
+    padding: 3rem 1.5rem;
+    background: var(--bg-primary);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-xl);
 }
 
 /* EFT Section */
@@ -890,6 +939,34 @@ body {
 
     .benefit-card h4 {
         margin-bottom: 0.25rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .gallery-img {
+        height: 250px;
+    }
+
+    .about-text .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about-text .gallery-img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-text .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
