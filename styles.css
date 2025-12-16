@@ -94,7 +94,7 @@ body {
 /* Hero Layout Styles */
 .hero-layout {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1.2fr 1.3fr;
     gap: 3rem;
     align-items: center;
     min-height: 60vh;
@@ -109,12 +109,12 @@ body {
 
 .hero-teacher-img {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     height: 350px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 1rem;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-    border: 4px solid rgba(212, 168, 83, 0.3);
+    border: 4px solid rgba(200, 184, 217, 0.3);
 }
 
 .hero-text-section {
@@ -139,7 +139,7 @@ body {
     }
 
     .hero-teacher-img {
-        max-width: 300px;
+        max-width: 350px;
         height: 280px;
     }
 }
@@ -903,7 +903,7 @@ body {
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .hero-subtitle {
