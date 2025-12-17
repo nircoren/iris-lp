@@ -996,6 +996,22 @@ body {
     .inspiration-text h3:last-child {
         font-size: clamp(0.875rem, 2.5vw, 1.375rem);
     }
+
+    /* Mobile gallery styles - single column layout */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about-text .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .about-text .gallery-img {
+        height: 250px;
+    }
 }
 
 /* Additional responsive for very small screens */
@@ -1029,6 +1045,22 @@ body {
 
     .inspiration-text h3:last-child {
         font-size: clamp(0.75rem, 2vw, 1.125rem);
+    }
+
+    /* Ensure single column gallery on very small screens */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .about-text .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+
+    .about-text .gallery-img {
+        height: 220px;
     }
 }
 
