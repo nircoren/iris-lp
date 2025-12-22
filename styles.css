@@ -7,18 +7,18 @@
 }
 
 :root {
-    /* Updated Color Palette - Refreshing Summer Fun */
-    --sky-blue: #8ecae6;
-    --blue-green: #219ebc;
-    --deep-space-blue: #023047;
-    --amber-flame: #ffb703;
-    --tiger-orange: #fb8500;
+    /* Updated Color Palette - based on #e1d5df, #b8b8ea, #977b10 */
+    --sky-blue: #e1d5df;       /* soft mauve */
+    --blue-green: #b8b8ea;     /* lavender */
+    --deep-space-blue: #2b2933; /* deep neutral for text / dark areas */
+    --amber-flame: #977b10;    /* warm golden accent */
+    --tiger-orange: #c89f1a;   /* brighter accent */
 
     /* Main color assignments */
     --primary-color: var(--deep-space-blue);
     --secondary-color: var(--blue-green);
     --accent-color: var(--amber-flame);
-    --accent-hover: #e5a602;
+    --accent-hover: #7a630d;
     --highlight-color: var(--tiger-orange);
     --light-blue: var(--sky-blue);
     --success-color: #10b981;
@@ -38,14 +38,14 @@
     --text-gray: #6b7280;
 
     /* Legacy colors for compatibility */
-    --background-light: #f9fafb;
-    --background-gray: #f3f4f6;
+    --background-light: #f5f4fa;
+    --background-gray: #f0eef5;
     --white: #ffffff;
 
     /* Border and shadow colors */
-    --border-light: rgba(139, 202, 230, 0.3);
-    --shadow-light: rgba(2, 48, 71, 0.1);
-    --shadow-medium: rgba(2, 48, 71, 0.2);
+    --border-light: rgba(184, 184, 234, 0.4);
+    --shadow-light: rgba(43, 41, 51, 0.08);
+    --shadow-medium: rgba(43, 41, 51, 0.18);
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
@@ -55,6 +55,7 @@
 
 body {
     font-family: 'Heebo', sans-serif;
+    font-size: 18px;
     line-height: 1.6;
     color: var(--text-dark);
     direction: rtl;
@@ -1100,7 +1101,21 @@ body {
     display: none;
 }
 
-/* Smooth Scrolling */
+/* Smooth Scrolling + Base Font Size */
 html {
     scroll-behavior: smooth;
+    font-size: 18px;
+}
+
+/* Slightly smaller base font on mobile */
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 16px;
+    }
 }
