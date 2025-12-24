@@ -531,8 +531,8 @@ body {
 }
 
 .eft-description strong {
-    color: var(--accent-color);
-    font-weight: 700;
+    text-decoration: underline;
+    font-weight: 900;
 }
 
 .eft-result {
@@ -563,13 +563,13 @@ body {
 }
 
 .quote {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-style: italic;
+    font-weight: 700;
     color: var(--white);
 }
 
 .quote-note {
-    color: #d1d5db;
     margin-top: 1rem;
 }
 
@@ -939,7 +939,7 @@ body {
     }
 
     .hero-description {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     .contact-form {
@@ -1048,7 +1048,7 @@ body {
     }
 
     .inspiration-text h3 {
-        font-size: clamp(0.875rem, 2.5vw, 1.25rem);
+        font-size: clamp(1.125rem, 6vw, 1.5rem);
         line-height: 1.2;
         margin-bottom: 0.25rem;
     }
