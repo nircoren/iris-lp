@@ -11,7 +11,7 @@
     --sky-blue: #e1d5df;       /* soft mauve */
     --blue-green: #b8b8ea;     /* lavender */
     --deep-space-blue: #2b2933; /* deep neutral for text / dark areas */
-    --amber-flame: #977b10;    /* warm golden accent */
+    --amber-flame: #bda132;    /* warm golden accent */
     --tiger-orange: #c89f1a;   /* brighter accent */
 
     /* Main color assignments */
@@ -659,13 +659,13 @@ body {
 .inspiration-text {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(45, 55, 72, 0.9), transparent);
+    background: rgba(45, 55, 72, 0.6);
     border-radius: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    padding: 2rem 1.5rem 2.5rem;
+    justify-content: center;
+    padding: 2rem 1.5rem;
     color: var(--white);
     text-align: center;
     overflow: hidden;
@@ -674,7 +674,7 @@ body {
 .inspiration-text h3 {
     font-size: clamp(1.125rem, 3vw, 2rem);
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     line-height: 1.3;
     max-width: 90%;
     word-wrap: break-word;
@@ -684,7 +684,7 @@ body {
 .inspiration-text h3:last-child {
     color: var(--accent-color);
     margin-bottom: 0;
-    font-size: clamp(1rem, 2.5vw, 1.75rem);
+    font-size: clamp(1.25rem, 3.5vw, 2.25rem);
 }
 
 /* Workshop Options */
@@ -910,6 +910,15 @@ body {
     .hero-arrow {
         display: none;
     }
+
+    /* Larger inspiration text on tablet */
+    .inspiration-text h3 {
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+    }
+
+    .inspiration-text h3:last-child {
+        font-size: clamp(1.5rem, 4vw, 2.25rem);
+    }
 }
 
 @media (max-width: 768px) {
@@ -984,18 +993,18 @@ body {
         z-index: 99999;
     }
 
-    /* Better inspiration text sizing for mobile */
+    /* Larger inspiration text on mobile */
     .inspiration-text {
-        padding: 1.5rem 1.25rem 2rem;
+        padding: 1.5rem 1.25rem;
     }
 
     .inspiration-text h3 {
-        font-size: clamp(1rem, 3vw, 1.5rem);
-        line-height: 1.25;
+        font-size: clamp(1.5rem, 6vw, 2rem);
+        line-height: 1.3;
     }
 
     .inspiration-text h3:last-child {
-        font-size: clamp(0.875rem, 2.5vw, 1.375rem);
+        font-size: clamp(1.25rem, 5vw, 1.75rem);
     }
 
     /* Mobile gallery styles - single column layout */
@@ -1033,7 +1042,7 @@ body {
         display: none;
     }
 
-    /* Better inspiration text sizing for very small screens */
+    /*!* Even larger inspiration text on very small screens for readability *!*/
     .inspiration-text {
         padding: 1rem 1rem 1.5rem;
     }
@@ -1045,7 +1054,7 @@ body {
     }
 
     .inspiration-text h3:last-child {
-        font-size: clamp(0.75rem, 2vw, 1.125rem);
+        font-size: clamp(1.125rem, 6vw, 1.5rem);
     }
 
     /* Ensure single column gallery on very small screens */
