@@ -531,8 +531,8 @@ body {
 }
 
 .eft-description strong {
-    text-decoration: underline;
     font-weight: 900;
+    font-size: clamp(1.4rem, 4vw, 3rem);
 }
 
 .eft-result {
