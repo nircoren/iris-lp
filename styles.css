@@ -935,7 +935,7 @@ body {
     }
 
     .hero-subtitle {
-        font-size: 1.25rem;
+        font-size: 1.45rem !important;
     }
 
     .hero-description {
